@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Praktikum OOP</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link File CSS Terpisah -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Profile Team -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-area">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <div>
+                    <h1>Lab Sheet Praktikum OOP</h1>
+                    <p>Pemrograman Berorientasi Objek</p>
+                </div>
+            </div>
+            
+            <div class="team-info">
+                <h3><i class="fa-solid fa-users"></i> Anggota Kelompok / Mahasiswa:</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-user-graduate"></i> 
+                        <strong>Rahmansyah</strong> (NIM: 24.24.032255) - <span>PTI</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user-graduate"></i> 
+                        <strong>Muhammad Fitriannur Akbar</strong> (NIM: 24.24.031635) - <span>PTI</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Section 1: Data Mahasiswa (Tugas Poin 1, 2, 3) -->
+        <section class="dashboard-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-address-card"></i> Task 1-3: Class Mahasiswa & Objects</h2>
+                <span class="badge badge-purple">3 Objek Instansiasi</span>
+            </div>
+
+            <div class="mahasiswa-grid" id="mahasiswa-container">
+                <!-- Data Mahasiswa dari script.js akan dimuat di sini -->
+            </div>
+        </section>
+
+        <!-- Section 2: Spreadsheet Data Produk (Tugas Poin 4 & Data 20+) -->
+        <section class="dashboard-section">
+            <div class="section-header-flex">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-table-cells"></i> Task 4: Class Produk Spreadsheet</h2>
+                    <span class="badge badge-green" id="total-produk-badge">20+ Produk Loaded</span>
+                </div>
+                
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Cari nama produk..." onkeyup="filterProduk()">
+                </div>
+            </div>
+
+            <!-- Stats Summary Cards -->
+            <div class="stats-grid">
+                <div class="stat-card card-blue">
+                    <i class="fa-solid fa-boxes-stacked stat-icon"></i>
+                    <div>
+                        <p>Total Jenis Produk</p>
+                        <h3 id="stat-total-items">0</h3>
+                    </div>
+                </div>
+                <div class="stat-card card-orange">
+                    <i class="fa-solid fa-cubes stat-icon"></i>
+                    <div>
+                        <p>Total Stok Barang</p>
+                        <h3 id="stat-total-stok">0</h3>
+                    </div>
+                </div>
+                <div class="stat-card card-green">
+                    <i class="fa-solid fa-wallet stat-icon"></i>
+                    <div>
+                        <p>Total Nilai Inventaris</p>
+                        <h3 id="stat-total-nilai">Rp 0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spreadsheet Table -->
+            <div class="table-responsive">
+                <table class="spreadsheet-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Produk</th>
+                            <th>Harga Satuan (Rp)</th>
+                            <th>Stok Unit</th>
+                            <th>Total Nilai Inventaris (Method)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="produk-table-body">
+                        <!-- Data Produk dari script.js akan dimuat di sini -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-right"><strong>AKUMULASI TOTAL:</strong></td>
+                            <td id="foot-total-stok"><strong>0</strong></td>
+                            <td id="foot-total-nilai" class="highlight-total"><strong>Rp 0</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: Note PSR-12 & GitHub Compliance (Tugas Poin 5) -->
+        <section class="dashboard-section info-box">
+            <h3><i class="fa-solid fa-code-branch"></i> Task 5: PSR-12 Clean Code & Git Standards</h3>
+            <p>Kode telah disusun dengan standar keterbacaan tinggi, penamaan class <em>PascalCase</em>, camelCase untuk method & variabel, serta pesan commit Git terstruktur:</p>
+            <code>git commit -m "feat: https://github.com/temporary-life0510/Pbo-pertemuan-2/tree/main"</code>
+        </section>
+
+    </main>
+
+    <!-- Link File JavaScript Terpisah -->
+    <script src="script.js"></script>
+</body>
+</html>
